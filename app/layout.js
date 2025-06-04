@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono,Quicksand,Montserrat,Inter } from "next/font/google";
+import { Geist, Geist_Mono,Quicksand,Montserrat,Inter,Roboto_Flex,Raleway } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -21,8 +21,18 @@ const montserrat = Montserrat({
   subsets: ["latin"],
 });
 
+const robotoFlex = Roboto_Flex({
+  variable: "--font-roboto-flex",
+  subsets: ["latin"],
+});
+
 const inter = Inter({
   variable: "--font-inter",
+  subsets: ["latin"],
+});
+
+const raleway = Raleway({
+  variable: "--font-raleway",
   subsets: ["latin"],
 });
 
@@ -34,7 +44,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${quicksand.variable} ${montserrat.variable} ${inter.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${quicksand.variable} ${montserrat.variable} ${inter.variable} ${robotoFlex.variable} ${raleway.variable}`}>
         {children}
       </body>
     </html>
